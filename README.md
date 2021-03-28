@@ -27,7 +27,7 @@ pay(amountPaying: 90.90, amountToDeduct: 24)
 func getQuantity(change: Int, totalCentsInChange: Int) -> Int 
 { ... }
 ``` 
-- returns number of Note/Coin in change
+- returns number/quantity of Note/Coin in change
 - eliminates repetions when as used in the for loop
 
 ### changeLeft
@@ -35,4 +35,8 @@ func getQuantity(change: Int, totalCentsInChange: Int) -> Int
 func changeLeft(change: Int, totalCentsInChange: Int) -> Int
 { ... }
 ```
+
+- returns the change remaining
+
+### Unit Testing
 
