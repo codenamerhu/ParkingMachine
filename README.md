@@ -8,5 +8,6 @@ pay(amountPaying: Double, amountToDeduct: Double) -> String
 { ... }
 ```
 
-- Parameter 1 as  ```swift amountpaying as ```
+- Parameter 1 as  ``` amountpaying```
+- Parameter 2 as ``` amountToDeduct```
 
