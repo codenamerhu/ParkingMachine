@@ -4,6 +4,10 @@ import XCTest
 // coins 5c(1/2), 10c(1), 20c(20), 50c(50), R 1(100), R 2(200), and R 5(500) denominations.
 // Banknotes include R 10(1000), R 20((2000), R 50(5000), R 100(10000), R200(20000) denominations.
 
+// Change to true to activate test units
+var runTest = false
+
+
 enum isRandDemonimation: Double {
     // MARK: COINS
     case fivecents = 0.05
@@ -100,12 +104,12 @@ func pay(amountPaying: Double, amountToDeduct: Double) ->  String {
     return "\(Int(change - change.truncatingRemainder(dividingBy: 1))).\(cents)"
 }
 
-//
+// MARK: - Get quantity of of Note/Coin
 func getQuantity(change: Int, totalCentsInChange: Int) -> Int {
     return change / totalCentsInChange
 }
 
-//
+// MARK:- Return chabge left
 func changeLeft(change: Int, totalCentsInChange: Int) -> Int{
     return change % totalCentsInChange
 }
@@ -113,6 +117,7 @@ func changeLeft(change: Int, totalCentsInChange: Int) -> Int{
 print(pay(amountPaying: 90.90, amountToDeduct: 24))
 
 
+// MARK:- Unit Testing
 class ParkingMachineTests: XCTestCase {
     
     override func setUp() {
@@ -136,16 +141,18 @@ class ParkingMachineTests: XCTestCase {
     
 }
 
-//class TestObserver: NSObject, XCTestObservation {
-//    private func testCase(_ testCase: XCTestCase,
-//                  didFailWithDescription description: String,
-//                  inFile filePath: String?,
-//                  atLine lineNumber: UInt) {
-//        assertionFailure(description, line: lineNumber)
-//    }
-//}
-//
-//fileprivate let testObserver = TestObserver()
-//XCTestObservationCenter.shared().addTestObserver(testObserver)
 
-ParkingMachineTests.defaultTestSuite.run()
+// MARK: Test Observer to find where test fails
+class TestObserver: NSObject, XCTestObservation {
+    private func testCase(_ testCase: XCTestCase,
+                  didFailWithDescription description: String,
+                  inFile filePath: String?,
+                  atLine lineNumber: UInt) {
+        assertionFailure(description, line: lineNumber)
+    }
+}
+
+fileprivate let testObserver = TestObserver()
+XCTestObservationCenter.shared.addTestObserver(testObserver)
+
+if runTest != false { ParkingMachineTests.defaultTestSuite.run() }
