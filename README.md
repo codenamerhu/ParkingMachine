@@ -22,7 +22,7 @@ pay(amountPaying: 90.90, amountToDeduct: 24)
 
 
 ## Additional functons
-### 
+### getQuantity
 ```swift
 func getQuantity(change: Int, totalCentsInChange: Int) -> Int 
 { ... }
