@@ -8,5 +8,5 @@ pay(amountPaying: Double, amountToDeduct: Double) -> String
 { ... }
 ```
 
-- amountpaying as 
+- Parameter 1 as  ```swift amountpaying as ```
 
