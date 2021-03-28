@@ -20,3 +20,12 @@ pay(amountPaying: 90.90, amountToDeduct: 24)
 
 <img src="screenshots/screenshot.png" width="540">
 
+
+## Additional functons
+### 
+```swift
+func getQuantity(change: Int, totalCentsInChange: Int) -> Int 
+{ ... }
+``` 
+returns number of Note/Coin in change
+
