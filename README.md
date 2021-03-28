@@ -13,7 +13,7 @@ pay(amountPaying: Double, amountToDeduct: Double) -> String
 
 - Parameter 1 as  ``` amountpaying```
 - Parameter 2 as ``` amountToDeduct```
-- function takes parameters as shown on Rand Denomation except withought the symbols, and with or without decimals when required, from 0 rands .. eg:
+- function takes parameters as shown on Rand Denomination except withought the symbols, and with or without decimals when required, from 0 rands .. eg:
 ```swift
 pay(amountPaying: 90.90, amountToDeduct: 24)
 ```
