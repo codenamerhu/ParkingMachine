@@ -30,3 +30,9 @@ func getQuantity(change: Int, totalCentsInChange: Int) -> Int
 - returns number of Note/Coin in change
 - eliminates repetions when as used in the for loop
 
+### changeLeft
+```swift
+func changeLeft(change: Int, totalCentsInChange: Int) -> Int
+{ ... }
+```
+
