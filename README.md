@@ -3,10 +3,10 @@
 
 ## Main function required
 ### 
-```s
+```swift
 pay(amountPaying: Double, amountToDeduct: Double) -> String 
 { ... }
 ```
-wift
+
 - amountpaying as 
 
