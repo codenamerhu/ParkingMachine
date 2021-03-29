@@ -42,3 +42,5 @@ func changeLeft(change: Int, totalCentsInChange: Int) -> Int
 
 ### Unit Testing
 
+- change '''runTest = false''' on line 8 to true to enanble  Unit testing
+
